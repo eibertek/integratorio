@@ -13,6 +13,7 @@ import "../Styles/index.scss";
 
 function CardComponent(props) {
   const { image, comments, tags } = props;
+  console.log(props.match.params);
   return (
     <Card className="card">
       <CardContent className="card-container">
