@@ -1,10 +1,9 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { connect } from 'react-redux'
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 import PlaceHolder from '../../Library/Component/Placeholder';
 import ImageComponent from '../../Library/Component/ImageComponent';
 import imagePlaceholder from '../../assets/placeholder1.jpg';
@@ -30,12 +29,8 @@ function CardComponent(props) {
 
 CardComponent.propTypes = {};
 
-export default CardComponent;
-/*
-import { connect } from 'react-redux'
-
 const mapStateToProps = (state) => ({
-  
+    file: state.card.fileUploaded  
 })
 
 const mapDispatchToProps = {
@@ -43,4 +38,9 @@ const mapDispatchToProps = {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardComponent)
+
+//export default CardComponent;
+/*
+
+
 */
