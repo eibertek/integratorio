@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "username": "eibermanm",
+      "name": "mariano",
+      "lastname": "eiberman"
+    },
+    {
+      "name": "Jorge",
+      "lastname": "Eiberman",
+      "age": "33"
+    },
+    {
+      "name": "Jorge",
+      "lastname": "sdasdsad",
+      "age": "33"
+    }
+  ]
+}
