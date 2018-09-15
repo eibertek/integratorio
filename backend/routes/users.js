@@ -2,6 +2,7 @@ const express = require('express');
 var router = express.Router();
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
+const uuidv4 = require('uuid/v4');
 
 const adapter = new FileSync('./backend/database/database.json')
 
@@ -26,7 +27,7 @@ router.post('/registracion', (req, res) => {
     if(userExist && userExist.username === username) {
         return res.send('El usuario ya existe').status(500);
     }    
-    const id = md5(new Date());
+    const id = uuidv4();
     db.get('users').push({ id,  nombre, apellido, username, password }).write();
     return res.send(users);            
 });
