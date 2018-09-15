@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import cardReducer from '../Card/Redux/cardReducer';
+import userReducer from '../Users/Redux/userReducer';
 
 export const NOTYPEDFINED = 'TYPE OF ACTION NTO DEFINED';
 export const rootReducer = (state = {}, action) => {
@@ -13,5 +14,6 @@ export const rootReducer = (state = {}, action) => {
 
 export default combineReducers({
     root: rootReducer,
-    card: cardReducer
+    card: cardReducer,
+    user: userReducer,
 });

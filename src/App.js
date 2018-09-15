@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-import CardComponent from './Card/Component/CardComponent';
 import CardFeature from './Card';
+import UserFeature from './Users';
 
 class App extends Component {
   render() {
@@ -11,8 +9,8 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path='/' exact />
             <Route path='/card' component={CardFeature} />
+            <Route path='/' component={UserFeature} />
           </Switch>
         </BrowserRouter>      
       </div>
