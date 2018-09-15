@@ -10,4 +10,6 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 app.use('/API', routes);
 
-app.listen(3002);
+app.listen(3002, null, () => {
+  console.log('El servicio esta en el puerto 3002');
+});
