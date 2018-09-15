@@ -3,7 +3,7 @@ var router = express.Router();
 const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 
-const userAdapter = new FileSync('./backend/database/user.json')
+const adapter = new FileSync('./backend/database/database.json')
 
 router.use(function (req, res, next) {
   console.log('Time:', Date.now());
