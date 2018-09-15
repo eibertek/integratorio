@@ -11,12 +11,6 @@ router.get('/ver-datos', (req, res) => {
 });
 
 router.post('/registracion', (req, res) => {
-/*    id
-    nombre
-    apellido
-    username
-    password
- */
     const { body: { nombre, apellido, username, password } } = req;
     if(!username || !apellido || !nombre || !password ) {
         return res.send('No se han enviado todos los datos').status(400);
@@ -33,7 +27,18 @@ router.post('/registracion', (req, res) => {
 });
 
 router.post('/login', (req, res) => {
-    return res.send(req.body);    
+    const { body:{ username, password } } = req;
+
+    if(!username || !password ) {
+        return res.send('Los datos no son validos').status(400);
+    }
+    const db = low(adapter); 
+    const userExist = db.get('users').find({ username, password }).value();    
+    if(userExist && userExist.username === username ) {
+        console.log('Se ha logueado el usuario ', username, ' a las ', new Date());        
+        return res.send({ status: 'ok', user: userExist });    
+    };    
+    return res.send('El usuario y/o contrasenia no es correcto').status(401);    
 });
 
 router.all('*', (req, res) => {

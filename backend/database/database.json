@@ -1,31 +1,9 @@
 {
   "users": [
     {
-      "name": "Jorge",
-      "lastname": "sdasdsad",
-      "age": "33"
-    },
-    {
-      "nombre": "Jorge",
-      "apellido": "sdasdsad",
-      "username": "eiberman",
-      "password": "q1w2e3r4"
-    },
-    {
-      "nombre": "Jorge",
-      "apellido": "sdasdsad",
-      "username": "eiberman",
-      "password": "q1w2e3r4"
-    },
-    {
-      "nombre": "Jorge",
-      "apellido": "sdasdsad",
-      "username": "eiberman",
-      "password": "q1w2e3r4"
-    },
-    {
-      "nombre": "Jorge",
-      "apellido": "sdasdsad",
+      "id": "5507a8ff-4e8f-4e0e-8c3a-1e0aeabc552c",
+      "nombre": "Mariano",
+      "apellido": "Eiberman",
       "username": "eiberman",
       "password": "q1w2e3r4"
     }
